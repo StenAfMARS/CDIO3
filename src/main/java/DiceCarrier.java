@@ -1,6 +1,6 @@
 /**
  * model object for a dice carrier.
- * @version 1.0
+ * @version 1.1
  */
 public class DiceCarrier {
 
@@ -11,21 +11,6 @@ public class DiceCarrier {
      */
     public int rollDie(int numberOfFaces){
         return  diceRoll(numberOfFaces);
-    }
-
-    /**
-     * Throw specified number of dice and return total sum.
-     * @param numberOfDice Specifies the number of dice to roll in each throw
-     * @return Total value of rolled dice.
-     */
-    public int rollDice(int numberOfDice){
-        int sum=0;
-
-        for (int i = 0; i < numberOfDice ; i++) {
-            sum = sum + diceRoll(6);
-        }
-
-        return sum;
     }
 
     /**
@@ -44,6 +29,11 @@ public class DiceCarrier {
         return sum;
     }
 
+    /**
+     * Simulates the throw of a die.
+     * @param numberOfFaces Specifies the number of faces on the simulated die.
+     * @return Returns face value of die.
+     */
     private int diceRoll(int numberOfFaces){
 
         int faceValue = (int) (Math.random() * numberOfFaces + 1);

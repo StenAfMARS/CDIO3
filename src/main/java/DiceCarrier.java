@@ -1,8 +1,25 @@
 /**
- * model object for a dice carrier.
- * @version 1.1
+ * Singmodel object for a dice carrier.
+ * @version 1.2
  */
 public class DiceCarrier {
+
+    private static DiceCarrier single_instance = null;
+    private int _numberOfDice;
+
+    private DiceCarrier(){ }
+
+    /**
+     * @return DiceCarrier object.
+     */
+    public static DiceCarrier getInstance()
+    {
+        if(single_instance == null)
+            single_instance = new DiceCarrier();
+
+        return single_instance;
+    }
+
 
     /**
      * Roll one die and return face value.

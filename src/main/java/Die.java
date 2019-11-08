@@ -11,10 +11,11 @@ public class Die {
     }
 
     public void setFaces(int faces){
-        this._numberOfFaces = faces;
+        _numberOfFaces = faces;
     }
 
-    public int getLastRollValue(){
+    public int get_lastRollValue(){
+
         return _lastRollValue;
     }
 
@@ -24,4 +25,6 @@ public class Die {
 
         return _lastRollValue;
     }
+
+
 }

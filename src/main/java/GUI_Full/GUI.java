@@ -96,12 +96,6 @@ public final class GUI
         return this.bc.getUserInteger(msg, min, max);
     }
 
-    public int getUserInteger(String msg)
-    {
-        msg = msg.replace("\n", "<BR>");
-        return this.bc.getUserInteger(msg, 0, 999999999);
-    }
-
     public String getUserButtonPressed(String msg, String... buttons)
     {
         msg = msg.replace("\n", "<BR>");
@@ -135,16 +129,6 @@ public final class GUI
     public boolean addPlayer(GUI_Player player)
     {
         return this.bc.addPlayer(player);
-    }
-
-    public void setDice(int faceValue1, int rotation1, int faceValue2, int rotation2)
-    {
-        this.bc.setDice(faceValue1, rotation1, faceValue2, rotation2);
-    }
-
-    public void setDice(int faceValue1, int faceValue2)
-    {
-        this.bc.setDice(faceValue1, faceValue2);
     }
 
     public void setDie(int faceValue)

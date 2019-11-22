@@ -8,13 +8,15 @@ public class GameFlow {
     boolean gameOver = false;
 
 
-    public GameFlow(Player[] players) {
-        this.players = players;
+    public GameFlow() {
+
         this.field = generateField();
+
     }
 
     public int[] generateField() {
-        int[] field;
+        int[] field = new int[16];
 
+        return field;
     }
 }

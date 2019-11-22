@@ -16,7 +16,7 @@ public class ChanceCard {
         return ch[randomNumber];
     }
 
-    private void cardEffect(){
+   /* private void cardEffect(){
 
         //some psudocode in the switch case
         switch (drawCard()){
@@ -39,7 +39,7 @@ public class ChanceCard {
                 if(input.equals(1))
                     currentplayer.posistion = posision[]+1;
                 else
-                    try again?????*/
+                    try again?????
                 break;
             case "ch6":
 
@@ -98,7 +98,8 @@ public class ChanceCard {
             case "ch20":
 
                 break;
+
         }
-    }
+    }*/
 
 }

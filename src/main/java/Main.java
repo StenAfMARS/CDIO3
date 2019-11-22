@@ -6,10 +6,8 @@ public class Main {
 
         DiceCarrier dc = DiceCarrier.getInstance();
 
-        GUI gui = new GUI();
+        GameLogic gameLogic = new GameLogic();
 
-        gui.getFields();
-
-        System.out.println();
+        gameLogic.startGame();
     }
 }

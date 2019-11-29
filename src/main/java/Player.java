@@ -4,13 +4,37 @@ public class Player {
 
     String name;
     int money;
+    int pos;
+    boolean isPrisoned;
+    boolean endTurn;
+    boolean jailFreeCard;
+    boolean isBirthday;
 
     Scanner keyboard = new Scanner(System.in);
 
     //Method that gives a player its name
     public Player(String name, int money){
+        this.endTurn = false;
+        this.isPrisoned = false;
+        this.jailFreeCard = false;
+        this.pos = 0;
         this.name = name;
         this.money = money;
+        this.isBirthday = false;
+    }
+
+    public void updatePos(int num){
+        int newPos = num + this.getPos();
+        if (newPos > 23){
+            this.setPos(newPos-23);
+        } else{
+            this.setPos(newPos);
+        }
+    }
+    public void checkStartField(int startPos){
+        if (startPos > this.getPos()){
+            this.setMoney(this.getMoney() + 2);
+        }
     }
 
     public String getName() {
@@ -28,41 +52,24 @@ public class Player {
         this.money = money;
     }
 
-    private Player[] generatePlayers(int playerNumber) {
-        int money;
+    public int getPos() { return pos; }
 
-
-        GameLogic gameLogic = new GameLogic();
-        playerNumber = gameLogic.getAntalPlayer();
-
-
-
-        Player[] players = new Player[playerNumber];
-
-
-
-        if (playerNumber == 2) {
-            money = 20;
-        }
-        if (playerNumber == 3) {
-            money = 18;
-        }
-        if (playerNumber == 4) {
-            money = 16;
-        } else {
-            money = 0;
-        }
-
-        for (int i = 0; i < playerNumber; i++) {
-            System.out.println("Give me your name");
-
-            String name = keyboard.nextLine();
-
-            players[i] = new Player(name, money);
-        }
-        return players;
-
+    public void setPos(int pos) {
+        this.pos = pos;
     }
+    public void toggleTurn() {
+        this.endTurn = !this.endTurn;
+    }
+    public void toggleJailCard() {
+        this.jailFreeCard = !this.jailFreeCard;
+    }
+    public void toggleBirthday() {
+        this.isBirthday = !this.isBirthday;
+    }
+    public boolean getTurn() {
+        return this.endTurn;
+    }
+
 
 }
 

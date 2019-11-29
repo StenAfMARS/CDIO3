@@ -11,30 +11,18 @@ public class GameLogic {
     public void startGame() {
 
 
-
         System.out.println("how many gamers are there????");
         playerNumber = keyboard.nextInt();
 
 
-        if (playerNumber > 1 || playerNumber <= 4) {
-            GameFlow gameFlow = new GameFlow();
-            gameFlow.generateField();
-
+        if (!(playerNumber < 2 || playerNumber > 4)) {
+            GameFlow gameFlow = new GameFlow(playerNumber);
+            gameFlow.turnHandler();
 
         } else {
             System.out.println("There can only be 2-4 players :'(");
             startGame();
 
         }
-    }
-
-    public int getAntalPlayer()
-    {
-        return playerNumber;
-    }
-
-    public void setAntalPlayer(int playerNumber)
-    {
-        this.playerNumber = playerNumber;
     }
 }

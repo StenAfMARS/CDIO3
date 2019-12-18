@@ -19,7 +19,7 @@ public class Die {
         return _lastRollValue;
     }
 
-    private int dieRoll(){
+    public int dieRoll(){
 
         _lastRollValue = (int) (Math.random() * _numberOfFaces + 1);
 

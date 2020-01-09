@@ -30,6 +30,7 @@ public class DiceCarrier {
         return  diceRoll(numberOfFaces);
     }
 
+
     /**
      *Throw specified number of dice with x amount of faces and return total sum.
      * @param numberOfDice Specifies the number of dice to roll in each throw

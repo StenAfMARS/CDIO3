@@ -3,6 +3,7 @@
     <extensionMap>
       <mapping pattern="placeholder" type="PLAIN_TEXT" />
       <mapping pattern="manifest" type="PLAIN_TEXT" />
+      <mapping ext="dat" type="PLAIN_TEXT" />
     </extensionMap>
   </component>
 </application>
